@@ -25,7 +25,7 @@ module "main" {
       source_ip             = "1.1.1.1"
       destination_ip        = "2.2.2.2"
       source_port_from      = 2001
-      source_port_to        = 2001
+      source_port_to        = 2002
       destination_port_to   = "http"
       destination_port_from = "http"
     }
@@ -54,7 +54,7 @@ resource "test_assertions" "spanFilterGrp" {
 }
 
 data "aci_rest_managed" "spanFilterEntry" {
-  dn = "${data.aci_rest_managed.spanFilterGrp.id}/proto-unspecified-src-[1.1.1.1]-dst-[2.2.2.2]-srcPortFrom-2001-srcPortTo-2001-dstPortFrom-http-dstPortTo-http"
+  dn = "${data.aci_rest_managed.spanFilterGrp.id}/proto-unspecified-src-[1.1.1.1]-dst-[2.2.2.2]-srcPortFrom-2001-srcPortTo-2002-dstPortFrom-http-dstPortTo-http"
 
   depends_on = [module.main]
 }
@@ -113,6 +113,6 @@ resource "test_assertions" "spanFilterEntry" {
   equal "srcPortTo" {
     description = "srcPortTo"
     got         = data.aci_rest_managed.spanFilterEntry.content.srcPortTo
-    want        = "2001"
+    want        = "2002"
   }
 }
