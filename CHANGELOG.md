@@ -1,4 +1,4 @@
-## 0.1.1 (unreleased)
+## 0.1.1
 
 - BREAKING CHANGE: Rename `source_port_from` attribute to `source_from_port`
 - BREAKING CHANGE: Rename `source_port_to` attribute to `source_to_port`
