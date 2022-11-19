@@ -1,3 +1,11 @@
+## 0.1.2 (unreleased)
+
+- Normalize `protocol` values and names
+- Normalize `source_from_port` values and names
+- Normalize `source_to_port` values and names
+- Normalize `destination_from_port` values and names
+- Normalize `destination_to_port` values and names
+
 ## 0.1.1
 
 - BREAKING CHANGE: Rename `source_port_from` attribute to `source_from_port`

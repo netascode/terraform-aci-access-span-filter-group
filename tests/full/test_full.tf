@@ -26,7 +26,7 @@ module "main" {
       destination_ip        = "2.2.2.2"
       source_from_port      = 2001
       source_to_port        = 2002
-      destination_to_port   = "http"
+      destination_to_port   = "80"
       destination_from_port = "http"
     }
   ]
